@@ -50,27 +50,27 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-card/50">
+    <section id="contact" className="py-20">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          <span className="text-primary glow-text">Get In</span>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 animate-fade-in">
+          <span className="text-primary">Get In</span>
           <span className="text-foreground"> Touch</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Have a project in mind or need security consultation? Let's talk!
+          Have a project in mind? Let's talk!
         </p>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div className="space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
+          <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <div className="p-3 bg-primary/10 rounded-lg">
-                <Mail className="w-6 h-6 text-primary" />
+              <div className="p-2 bg-primary/10 rounded-lg">
+                <Mail className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Email</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-1">Email</h3>
                 <a
                   href="mailto:prathameshshelar389@gmail.com"
-                  className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
                   prathameshshelar389@gmail.com
                 </a>
@@ -78,12 +78,12 @@ const Contact = () => {
             </div>
             
             <div className="flex items-start gap-4">
-              <div className="p-3 bg-primary/10 rounded-lg">
-                <MapPin className="w-6 h-6 text-primary" />
+              <div className="p-2 bg-primary/10 rounded-lg">
+                <MapPin className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Location</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-lg font-semibold text-foreground mb-1">Location</h3>
+                <p className="text-muted-foreground text-sm">
                   Karmaveer Bhaurao Patil College of Engineering<br />
                   Satara, Maharashtra
                 </p>
@@ -91,9 +91,9 @@ const Contact = () => {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label htmlFor="name" className="block text-foreground mb-2 font-medium">
+              <label htmlFor="name" className="block text-foreground mb-2 font-medium text-sm">
                 Name
               </label>
               <input
@@ -103,13 +103,13 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-secondary border border-primary/20 rounded-md text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-300"
+                className="w-full px-4 py-2.5 bg-secondary border border-border rounded-lg text-foreground focus:outline-none focus:border-primary transition-all"
                 placeholder="Your Name"
               />
             </div>
             
             <div>
-              <label htmlFor="email" className="block text-foreground mb-2 font-medium">
+              <label htmlFor="email" className="block text-foreground mb-2 font-medium text-sm">
                 Email
               </label>
               <input
@@ -119,13 +119,13 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-secondary border border-primary/20 rounded-md text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-300"
+                className="w-full px-4 py-2.5 bg-secondary border border-border rounded-lg text-foreground focus:outline-none focus:border-primary transition-all"
                 placeholder="your.email@example.com"
               />
             </div>
             
             <div>
-              <label htmlFor="message" className="block text-foreground mb-2 font-medium">
+              <label htmlFor="message" className="block text-foreground mb-2 font-medium text-sm">
                 Message
               </label>
               <textarea
@@ -134,17 +134,17 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                rows={6}
-                className="w-full px-4 py-3 bg-secondary border border-primary/20 rounded-md text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-300 resize-none"
-                placeholder="Your message..."
+                rows={5}
+                className="w-full px-4 py-2.5 bg-secondary border border-border rounded-lg text-foreground focus:outline-none focus:border-primary transition-all resize-none"
+                placeholder="Your message here..."
               />
             </div>
             
             <button
               type="submit"
-              className="w-full px-8 py-3 bg-primary text-primary-foreground rounded-md hover:shadow-[0_0_30px_rgba(0,191,255,0.6)] transition-all duration-300 font-semibold flex items-center justify-center gap-2"
+              className="w-full px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all font-medium flex items-center justify-center gap-2"
             >
-              <Send size={20} />
+              <Send className="w-5 h-5" />
               Send Message
             </button>
           </form>

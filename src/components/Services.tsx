@@ -35,28 +35,28 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20">
+    <section id="services" className="py-20 bg-card/30">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          <span className="text-primary glow-text">Cyber Security</span>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 animate-fade-in">
+          <span className="text-primary">Cyber Security</span>
           <span className="text-foreground"> Services</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Professional security testing and consulting services to protect your digital assets
+          Professional security testing and consulting services
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto mb-10">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <div
                 key={index}
-                className="bg-card border border-primary/20 rounded-lg p-6 hover:shadow-[0_0_30px_rgba(0,191,255,0.3)] hover:border-primary/50 transition-all duration-300 group"
+                className="bg-card border border-border rounded-lg p-5 hover:border-primary/30 transition-all duration-300"
               >
-                <div className="p-3 bg-primary/10 rounded-lg w-fit mb-4 group-hover:shadow-[0_0_20px_rgba(0,191,255,0.4)] transition-all duration-300">
-                  <Icon className="w-8 h-8 text-primary" />
+                <div className="p-2 bg-primary/10 rounded-lg w-fit mb-3">
+                  <Icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-base font-semibold text-foreground mb-2">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground text-sm">
@@ -70,7 +70,7 @@ const Services = () => {
         <div className="text-center">
           <a
             href="#contact"
-            className="inline-block px-8 py-3 bg-accent text-accent-foreground rounded-md hover:shadow-[0_0_30px_rgba(0,255,127,0.5)] transition-all duration-300 font-semibold"
+            className="inline-block px-8 py-3 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-all duration-300 font-medium"
           >
             Request Security Testing
           </a>

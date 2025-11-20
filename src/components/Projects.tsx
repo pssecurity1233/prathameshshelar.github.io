@@ -29,37 +29,37 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-card/50">
+    <section id="projects" className="py-20 bg-card/30">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
-          <span className="text-primary glow-text">Featured</span>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 animate-fade-in">
+          <span className="text-primary">Featured</span>
           <span className="text-foreground"> Projects</span>
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {projects.map((project, index) => {
             const Icon = project.icon;
             return (
               <div
                 key={index}
-                className="bg-card border border-primary/20 rounded-lg p-6 hover:shadow-[0_0_30px_rgba(0,191,255,0.3)] hover:border-primary/50 transition-all duration-300 group"
+                className="bg-card border border-border rounded-lg p-6 hover:border-primary/40 transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg group-hover:shadow-[0_0_20px_rgba(0,191,255,0.4)] transition-all duration-300">
-                    <Icon className="w-8 h-8 text-primary" />
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Icon className="w-7 h-7 text-primary" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-lg font-semibold text-foreground mb-2">
                       {project.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4 text-sm">
+                    <p className="text-muted-foreground mb-3 text-sm">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="px-3 py-1 text-xs bg-secondary text-primary rounded-md border border-primary/20"
+                          className="px-2 py-1 text-xs bg-secondary text-foreground rounded border border-border"
                         >
                           {tech}
                         </span>
