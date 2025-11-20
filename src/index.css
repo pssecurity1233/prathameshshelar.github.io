@@ -87,14 +87,27 @@ All colors MUST be HSL.
 
 @layer utilities {
   .glow-text {
-    text-shadow: 0 0 20px rgba(0, 191, 255, 0.8),
-                 0 0 40px rgba(0, 191, 255, 0.5);
+    text-shadow: 0 0 20px rgba(0, 191, 255, 0.6),
+                 0 0 40px rgba(0, 191, 255, 0.3);
   }
   
   .cyber-grid {
     background-image: 
-      linear-gradient(rgba(0, 191, 255, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 191, 255, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
+      linear-gradient(rgba(0, 191, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 191, 255, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
 }
