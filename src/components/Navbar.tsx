@@ -14,11 +14,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-primary/20">
-      <div className="container mx-auto px-6 py-4">
+    <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+      <div className="container mx-auto px-6 py-3.5">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold">
-            <span className="text-primary glow-text">PS</span>
+          <div className="text-xl font-bold">
+            <span className="text-primary">PS</span>
             <span className="text-foreground">.dev</span>
           </div>
 
@@ -28,15 +28,14 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 relative group"
+                className="text-foreground hover:text-primary transition-colors text-sm"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
             <a
               href="#contact"
-              className="px-6 py-2 bg-primary text-primary-foreground rounded-md hover:shadow-[0_0_20px_rgba(0,191,255,0.5)] transition-all duration-300"
+              className="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all text-sm font-medium"
             >
               Hire Me
             </a>
@@ -53,12 +52,12 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4">
+          <div className="md:hidden mt-4 pb-4 space-y-3">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="block text-foreground hover:text-primary transition-colors duration-300"
+                className="block text-foreground hover:text-primary transition-colors text-sm"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
@@ -66,7 +65,7 @@ const Navbar = () => {
             ))}
             <a
               href="#contact"
-              className="block px-6 py-2 bg-primary text-primary-foreground rounded-md text-center hover:shadow-[0_0_20px_rgba(0,191,255,0.5)] transition-all duration-300"
+              className="block px-6 py-2 bg-primary text-primary-foreground rounded-lg text-center hover:bg-primary/90 transition-all text-sm font-medium"
               onClick={() => setIsOpen(false)}
             >
               Hire Me

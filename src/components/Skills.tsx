@@ -21,23 +21,23 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
-          <span className="text-primary glow-text">Technical</span>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 animate-fade-in">
+          <span className="text-primary">Technical</span>
           <span className="text-foreground"> Skills</span>
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-card border border-primary/20 rounded-lg p-6 hover:shadow-[0_0_30px_rgba(0,191,255,0.2)] transition-all duration-300"
+              className="bg-card border border-border rounded-lg p-6 hover:border-primary/30 transition-all duration-300"
             >
-              <h3 className="text-2xl font-bold text-primary mb-4">{category.title}</h3>
-              <div className="flex flex-wrap gap-3">
+              <h3 className="text-xl font-semibold text-primary mb-4">{category.title}</h3>
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
                   <span
                     key={skillIndex}
-                    className="px-4 py-2 bg-secondary text-foreground rounded-md border border-primary/30 hover:border-primary hover:shadow-[0_0_15px_rgba(0,191,255,0.3)] transition-all duration-300 text-sm"
+                    className="px-3 py-1.5 bg-secondary text-foreground rounded border border-border text-sm"
                   >
                     {skill}
                   </span>
