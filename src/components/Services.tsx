@@ -1,4 +1,5 @@
 import { Shield, FileSearch, Bug, Lock, Cloud, AlertTriangle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
@@ -68,12 +69,20 @@ const Services = () => {
         </div>
 
         <div className="text-center">
-          <a
-            href="#contact"
-            className="inline-block px-8 py-3 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-all duration-300 font-medium"
-          >
-            Request Security Testing
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/cyber-attacks"
+              className="inline-block px-8 py-3 bg-secondary text-foreground rounded-lg border border-border hover:bg-secondary/80 transition-all duration-300 font-medium"
+            >
+              Learn About Cyber Attacks
+            </Link>
+            <a
+              href="#contact"
+              className="inline-block px-8 py-3 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-all duration-300 font-medium"
+            >
+              Request Security Testing
+            </a>
+          </div>
         </div>
       </div>
     </section>
