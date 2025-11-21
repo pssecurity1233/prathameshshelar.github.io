@@ -42,12 +42,10 @@ const Hero = () => {
             </a>
           <a
             href="/resume.pdf"
-            download
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group px-8 py-4 bg-secondary text-foreground rounded-lg border border-border hover:border-primary hover:shadow-[0_0_20px_rgba(0,191,255,0.3)] transition-all duration-300 font-semibold flex items-center gap-2"
+            download="Prathamesh_Shelar_Resume.pdf"
+            className="group px-8 py-4 bg-secondary text-foreground rounded-lg border border-border hover:bg-secondary/80 transition-colors duration-200 font-semibold flex items-center gap-2"
           >
-            <Download className="w-5 h-5 group-hover:animate-bounce" />
+            <Download className="w-5 h-5" />
             Download Resume
           </a>
           </div>
