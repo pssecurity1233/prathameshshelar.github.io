@@ -1,6 +1,7 @@
 import { Mail, MapPin, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,37 +10,35 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Using FormSubmit.co to send email
-    const form = e.target as HTMLFormElement;
+    toast.loading("Sending message...");
     
-    fetch("https://formsubmit.co/prathameshshelar389@gmail.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-        _subject: `New Contact from ${formData.name}`,
-        _captcha: "false",
-      }),
-    })
-      .then((response) => {
-        if (response.ok) {
-          toast.success("Message sent successfully!");
-          setFormData({ name: "", email: "", message: "" });
-        } else {
-          toast.error("Failed to send message. Please try again.");
-        }
-      })
-      .catch(() => {
-        toast.error("Failed to send message. Please try again.");
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
       });
+
+      if (error) {
+        console.error("Error sending email:", error);
+        toast.dismiss();
+        toast.error("Failed to send message. Please try again.");
+        return;
+      }
+
+      toast.dismiss();
+      toast.success("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error:", error);
+      toast.dismiss();
+      toast.error("Failed to send message. Please try again.");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -69,10 +68,10 @@ const Contact = () => {
               <div>
                 <h3 className="text-lg font-semibold text-foreground mb-1">Email</h3>
                 <a
-                  href="mailto:prathameshshelar389@gmail.com"
+                  href="mailto:prathmeshshelar1233@gmail.com"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
-                  prathameshshelar389@gmail.com
+                  prathmeshshelar1233@gmail.com
                 </a>
               </div>
             </div>
