@@ -2,209 +2,123 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Prathamesh Shelar | Cybersecurity Analyst Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0d0d0d;
-            color: #e6e6e6;
-        }
-
-        header {
-            padding: 50px;
-            text-align: center;
-            background: #111;
-            border-bottom: 2px solid #00eaff;
-        }
-
-        h1 { color: #00eaff; margin-bottom: 10px; }
-        h2 { color: #ffcc00; margin-top: 40px; }
-
-        section {
-            width: 80%;
-            margin: auto;
-            padding: 30px 0;
-        }
-
-        .skills-grid, .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .card {
-            padding: 20px;
-            background: #1a1a1a;
-            border-left: 3px solid #00eaff;
-            border-radius: 6px;
-        }
-
-        .contact-box {
-            background: #1a1a1a;
-            padding: 20px;
-            border-radius: 6px;
-            margin-top: 20px;
-        }
-
-        a { color: #00eaff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+    <title>Prathamesh Shelar | Cyber Security Analyst</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header>
-    <h1>Prathamesh Dhananjay Shelar</h1>
-    <h3>Cybersecurity Analyst | Penetration Tester | Security Automation</h3>
-    <p>
-        <a href="mailto:prathmeshshelar1233@gmail.com">prathmeshshelar1233@gmail.com</a> |
-        <a href="https://linkedin.com/in/prathamesh-shelar-26779725b">LinkedIn</a> |
-        <a href="https://github.com/pssecurity1233">GitHub</a>
-    </p>
+    <div class="logo">PS<sub>SEC</sub></div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="resume.pdf" download class="resume-btn">Download Resume</a>
+    </nav>
 </header>
 
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+    <div class="hero-text">
+        <h1>Hello, I'm <span class="highlight">Prathamesh Shelar</span></h1>
+        <p>Cyber Security Analyst | Web Security Researcher | Cloud | Python</p>
+        <a href="#projects" class="glow-btn">View My Work</a>
+    </div>
+
+    <div class="hero-img">
+        <img src="assets/profile.jpg" alt="Profile Picture">
+    </div>
+</section>
+
+
+<!-- ABOUT SECTION -->
 <section id="about">
-    <h2>Summary</h2>
-    <p>
-        Cybersecurity Analyst specializing in penetration testing, vulnerability assessment,
-        and security automation. Experienced in OWASP Top 10, threat modeling, recon automation,
-        attack simulation, and secure development. Strong at documenting risks and collaborating
-        with teams to improve security posture. Passionate about solving CTFs, building security
-        tools, and continuous learning.
-        :contentReference[oaicite:1]{index=1}
+    <h2 class="section-title">About Me</h2>
+    <p class="about-text">
+        I am a cybersecurity and software testing enthusiast with experience in web security, 
+        vulnerability assessment, OWASP testing, API security, and cloud technologies. 
+        I enjoy hunting real-world bugs such as IDOR, CSRF, GraphQL flaws, parameter pollution, 
+        and authentication issues. I’ve also worked on projects involving facial authentication, 
+        liveness detection, real-time chat applications, and secure cloud deployments.
     </p>
 </section>
 
+
+<!-- SKILLS SECTION -->
 <section id="skills">
-    <h2>Skills</h2>
+    <h2 class="section-title">Skills</h2>
 
-    <div class="skills-grid">
-        <div class="card">
-            <h3>Security</h3>
-            <p>Penetration Testing, VAPT, Threat Modeling, SIEM Monitoring, Log Analysis</p>
-        </div>
-
-        <div class="card">
-            <h3>Tools</h3>
-            <p>Burp Suite, Nmap, Wireshark, Metasploit, Gobuster, SQLmap, Nikto, Dirsearch</p>
-        </div>
-
-        <div class="card">
-            <h3>Development</h3>
-            <p>Python, JavaScript, HTML, CSS</p>
-        </div>
-
-        <div class="card">
-            <h3>Frameworks</h3>
-            <p>Flask, Django</p>
-        </div>
-
-        <div class="card">
-            <h3>Operating Systems</h3>
-            <p>Kali Linux, Parrot OS, Windows</p>
-        </div>
-
-        <div class="card">
-            <h3>Databases & Version Control</h3>
-            <p>MySQL, Firebase, Git, GitHub</p>
-        </div>
-
-        <div class="card">
-            <h3>Compliance</h3>
-            <p>ISO 27001, GDPR, PCI-DSS</p>
-        </div>
-
-        <div class="card">
-            <h3>Soft Skills</h3>
-            <p>Teamwork, Communication, Documentation, Incident Reporting</p>
-        </div>
+    <div class="skill-container">
+        <span class="skill">Cyber Security</span>
+        <span class="skill">Web Security</span>
+        <span class="skill">Burp Suite</span>
+        <span class="skill">OWASP Testing</span>
+        <span class="skill">API Security</span>
+        <span class="skill">SOC Fundamentals</span>
+        <span class="skill">Linux</span>
+        <span class="skill">Python</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">GitHub</span>
+        <span class="skill">AWS</span>
     </div>
 </section>
 
-<section id="experience">
-    <h2>Experience</h2>
 
-    <div class="card">
-        <h3>DROP Organization – Cybersecurity Training (Feb 2024)</h3>
-        <ul>
-            <li>Performed penetration tests on 15+ live and simulated web apps.</li>
-            <li>Identified 20+ critical vulnerabilities mapped to OWASP Top 10 & MITRE ATT&CK.</li>
-            <li>Built Python/Bash automated recon flows reducing effort by 60%.</li>
-            <li>Documented findings with 90% exploit validation success rate.</li>
-        </ul>
-        :contentReference[oaicite:2]{index=2}
-    </div>
-</section>
-
+<!-- PROJECTS SECTION -->
 <section id="projects">
-    <h2>Projects</h2>
+    <h2 class="section-title">Projects</h2>
 
-    <div class="projects-grid">
+    <div class="project-grid">
 
-        <div class="card">
-            <h3>Web-Enum Tool (2024)</h3>
-            <p>
-                Python-based web enumeration tool scanning 200+ domains with subdomain discovery,
-                endpoint mapping, directory brute-force, and recon reporting.
-            </p>
+        <div class="project-card">
+            <h3>Facial Authentication with Liveness Detection</h3>
+            <p>ML-powered system ensuring secure identity verification using real-time face tracking.</p>
         </div>
 
-        <div class="card">
-            <h3>HTTP Header Security Scanner (2024)</h3>
-            <p>
-                Analyzed 50+ websites, found 12+ critical header misconfigurations,
-                provided fixes aligned with OWASP ASVS.
-            </p>
+        <div class="project-card">
+            <h3>Realtime Chat App</h3>
+            <p>Secure real-time chat platform with Firebase authentication and live messaging.</p>
         </div>
 
-        <div class="card">
-            <h3>Machine Learning Malware Detection (2023)</h3>
-            <p>
-                Built ML malware classifier achieving 92% accuracy using entropy-based features.
-            </p>
+        <div class="project-card">
+            <h3>COVID-19 Tracker</h3>
+            <p>API-based dashboard showing real-time case updates, graphs, and trends.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Web Security Lab Collection</h3>
+            <p>Hands-on security testing: CSRF, XSS, SQLi, IDOR, GraphQL brute force, parameter pollution.</p>
         </div>
 
     </div>
 </section>
 
-<section id="education">
-    <h2>Education</h2>
 
-    <div class="card">
-        <h3>B.Tech – Electronics & Telecommunications (2022–2026)</h3>
-        <p>KBP College of Satara — CGPA: 7.12</p>
-    </div>
-
-    <div class="card">
-        <h3>Higher Secondary Certificate (HSC)</h3>
-        <p>Adv. Dadasaheb Chavan College Masur — 76.67%</p>
-    </div>
-</section>
-
-<section id="activities">
-    <h2>Achievements & Activities</h2>
-
-    <ul>
-        <li>Completed 30+ cybersecurity labs on TryHackMe & Hack The Box.</li>
-        <li>Contributed to open-source security automation tools.</li>
-        <li>Participated in CTFs: web exploitation, OSINT, reverse engineering.</li>
-    </ul>
-    :contentReference[oaicite:3]{index=3}
-</section>
-
+<!-- CONTACT FORM -->
 <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-box">
-        <p><strong>Email:</strong> prathmeshshelar1233@gmail.com</p>
-        <p><strong>Phone:</strong> +91 99222 87743</p>
-        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/prathamesh-shelar-26779725b">View Profile</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/pssecurity1233">github.com/pssecurity1233</a></p>
-    </div>
+    <h2 class="section-title">Contact</h2>
+
+    <form class="contact-form" onsubmit="sendMessage(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button class="glow-btn" type="submit">Send Message</button>
+    </form>
+
+    <p id="status"></p>
 </section>
+
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 Prathamesh Shelar | Cyber Security Portfolio</p>
+</footer>
 
 </body>
 </html>
